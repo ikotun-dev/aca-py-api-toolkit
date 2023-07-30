@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ACA Social</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password"id="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const loginForm = document.getElementById('loginForm');
+
+  loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    // Get the username and password from the form
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Send a login request to the server
+    fetch('https://purit-api-production.up.railway.app/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username, password })
+    })
+    .then(response => {
+      if (response.status === 200) {
+        alert('Login successful!');
+
+        // Redirect to the posts page or perform other actions after successful login
+        window.location.href = 'posts.html';
+      } else {
+        alert('Login failed. Please check your username and password.');
+      }
+    })
+    .catch(error => {
+      alert('An error occurred. Please try again later.');
+    });
+  });
+});
+
+
+</script>
+
+
+</html>

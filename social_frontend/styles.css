@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light green background */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* White container background */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow effect */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #28a745; /* Green header text color */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea, button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #28a745; /* Green button background */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.post {
+    border: 1px solid #28a745; /* Green border for posts */
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff; /* White background for posts */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adding a shadow effect for posts */
+}
