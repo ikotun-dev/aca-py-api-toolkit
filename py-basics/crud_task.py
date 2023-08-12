@@ -20,11 +20,12 @@ else :
     if choice == 1 :
         print("-----Create Post-----")
         content = str(input("Enter your new post content : "))
-        list_of_posts[0] = content
+        list_of_posts.append(content)
+
         print(" -- Your post has been added --  ")
         for post in list_of_posts : print(post)
 
-    #R - READING POST [GET REQUEST]
+    #R - READING POST [GET REQUEST] 
     if choice == 2:
         print("----Latest Posts-----")
         for post in list_of_posts : print(post)
